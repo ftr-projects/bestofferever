@@ -1,0 +1,41 @@
+.home {
+  color: $gray;
+  font-size: $font-size;
+  h1, h2, h3, h4 {
+    font-family: $title-family;
+    margin-top: 0;
+  }
+  h3 {
+    font-size: $font-size-title;
+    line-height: 1;
+  }
+  p {
+    font-size: $font-size;
+    line-height: 1.5;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-left: 15px;
+    li {
+      counter-increment: item;
+      margin-bottom: 5px;
+      margin-left: 15px;
+      &:before {
+        font-family: "avenir heavy";
+        margin-right: 4px;
+        content: counter(item) ".";
+        width: 1.2em;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        left: -15px;
+
+       }
+    }
+  }
+}
